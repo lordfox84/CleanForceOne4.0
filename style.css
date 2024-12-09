@@ -107,7 +107,6 @@ i{
     justify-content: center;
     margin: 5px ;
     border: 1px solid var(--base-white-clr);
-
     color: var(--base-white-clr);
     transition: all 0.3s ease-in-out;
 }
@@ -119,6 +118,7 @@ i{
     max-width: 5rem;
     min-height: 100%;
     cursor: pointer;
+    margin-top: 10px;
 }
 #logo{
     display: flex;
@@ -127,28 +127,72 @@ i{
     justify-content: center;
     text-align: center;
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 100px;
     color: var(--base-white-clr);
     > img{
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 }
-#home{
+section{
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.text-box{
+    flex: 1;
+    padding: 50px;
+    min-width: 500px;
+    width: 500px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#home{
     justify-content: center;
     align-items: center;
     padding: 20px;
     transition: 0.5s ease;
 }
 #about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
-    padding: 20px;
+    padding-bottom: 50px;
+}
+#about > div > div{
+    width: 600px;
+    border-radius: 25px;
+}
+#about ul{
+    list-style: none;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.image img{
+    max-height: 50vh;
+    height: auto;
+    max-width: 100%;
+    border-radius: 25px;
+}
+#clients{
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 50px;
 }
 #services{
 
@@ -156,13 +200,51 @@ i{
 #gallery{
 
 }
-.img{
-    max-width: 50%;
-    height: auto;
-    border-radius: 15px;
+
+
+.slider{
+    width: 100%;
+    border: 1px solid red;
+    height: var(--height);
+    overflow: hidden;    
+    mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        #000 10% 90%,
+        transparent
+        );
 }
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 20s linear infinite;
+    animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc(var(--width) * -1)
+    }
+}
+
 @media screen and (max-width: 990px) {
     nav{
         visibility: hidden;
+    }
+    section{
+        flex-wrap: wrap;
     }
 }

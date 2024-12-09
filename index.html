@@ -26,7 +26,7 @@
     </header>
 
     <main>
-        <section id="home">
+        <section id="home" class="container">
             <div id="logo">
                 <img src="images/Logo4White.png" alt="Logo firmy">
                 <h1>Zajistíme čistý vzduch pro Vaše zákazníky i zaměstnance</h1>
@@ -52,9 +52,9 @@
                 <h2>Cokoliv dalšího</h2>
             </div>
         </section>
-        <section id="about-us">
-            <div id="about">
-                <div>
+        <section id="about" class="container">
+            <div class="content">
+                <div class="text-box">
                     <h3>
                         O nás
                     </h3>
@@ -62,10 +62,11 @@
                         Společnost <strong>Clean Force One</strong> byla založena v květnu 2008 a spontánně navázala na
                         zkušenosti z oblasti vzduchotechniky a údržby o ni.
                     </p>
+                    <br>
                     <p>
-                        <strong>Proč si vybrat právě nás?</strong>
+                        <strong>A proč si vybrat právě nás?</strong>
                     </p>
-                    <ul class="fst-italic">
+                    <ul>
                         <li><i class="ri-thumb-up-line"></i> Jsme v oboru již <span id="yearsPassed"></span> let</li>
                         <li><i class="ri-thumb-up-line"></i> Práci se věnujeme s péčí</li>
                         <li><i class="ri-thumb-up-line"></i> Pracujeme v noci i o víkendech</li>
@@ -73,19 +74,21 @@
                         <li><i class="ri-thumb-up-line"></i> Cenovou nabídku Vám vypracujeme po obhlídce a posouzení
                             skutečného stavu znečištění vzduchotechniky</li>
                     </ul>
+                    <br>
                     <p>
                         <strong>Jak čistíme potrubí?</strong>
                     </p>
-                    <ul class="fst-italic">
+                    <ul>
                         <li><i class="ri-bard-line"></i> <strong>Suché</strong> pomocí technologie LIFA AIR (rotační
                             kartáče, ventilárory, průmyslové vysavače)</li>
                         <li><i class="ri-bard-line"></i> <strong>Mastné</strong> ekologicky nezávadnými čistícími
                             přípravky, rozpouštědly a vodou pod tlakem (WAP)</li>
                     </ul>
+                    <br>
                     <p>
                         <strong>Vyčistíme všechno co patří ke vzduchotechnice</strong>
                     </p>
-                    <ul class="fst-italic">
+                    <ul>
                         <li><i class="ri-arrow-drop-right-fill"></i> Strojovny vzduchotechniky, rekuperátory, tlumiče
                             hluku, požární a regulační klapky, výustky, ventilátory, digestoře, tukové filtry a další
                         </li>
@@ -93,18 +96,40 @@
                             <strong>Tukové filtry</strong> vyrobíme nebo zrepasujeme.</li>
                     </ul>
                 </div>
-                <div>
-                    <img class="img" src="images/gallery/car002.jpeg" alt="">
+                <div class="image">
+                    <img src="images/gallery/car002.jpeg" alt="">
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="clients" class="container">
+            <div class="slider" style="
+                --width: 100px;
+                --height: 100px;
+                --quantity: 8;
+                ">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="images/clients/bondy_red_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="images/clients/fenix_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="images/clients/Ceske_radiokomunikace_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="images/clients/hotel_clarion_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 5"><img src="images/clients/hotel_meritum_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 6"><img src="images/clients/lazne_podebrady_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 7"><img src="images/clients/lazne_priessnitz_transparent.png" alt=""></div>
+                    <div class="item" style="--position: 8"><img src="images/clients/CVUT_SUZ_transparent.png" alt=""></div>
+                </div>
+            </div>
+            <!-- <script>
+                var copy = document.querySelector(".logos-slide",cloneNode(true));
+                document.querySelector(".logos").appendChild(copy);
+            </script> -->
         </section>
-        <section id="gallery">
+        <section id="services" class="container">
         </section>
-        <section id="team">
+        <section id="gallery" class="container">
         </section>
-        <section id="contact-us">
+        <section id="team" class="container">
+        </section>
+        <section id="contact-us" class="container">
         </section>
     </main>
 
