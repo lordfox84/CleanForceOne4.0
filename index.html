@@ -5,117 +5,123 @@
     <meta charset="UTF-8" />
     <title>CLEAN FORCE ONE - Čistění vzduchotechniky</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <script src="app.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
 </head>
 
 <body>
     <header>
-        <img id="logo-header" src="images/Logo4White.png" alt="">
+        <a href="./index.html"><img id="logo-header" src="images/Logo4White.png" alt=""></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="#home">Domů</a></li>
-                <li><a href="#about-us">O nás</a></li>
+                <li><a class="active" href="#home">Domů</a></li>
+                <li><a href="#about">O nás</a></li>
                 <li><a href="#services">Služby</a></li>
                 <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#team">Tým</a></li>
                 <li><a href="#contact-us">Kontakt</a></li>
             </ul>
         </nav>
-        <a id="contact-btn" href="#contact-us"><button>Kontaktní formulář</button></a>
+        <a href="#contact-us"><button>Kontaktní formulář</button></a>
     </header>
 
     <main>
-        <section id="home" class="container">
-            <div id="logo">
-                <img src="images/Logo4White.png" alt="Logo firmy">
-                <h1>Zajistíme čistý vzduch pro Vaše zákazníky i zaměstnance</h1>
-            </div>
-            <div class="box">
-                <i class="ri-building-3-line"></i>
-                <h2>Průmyslové budovy</h2>
-            </div>
-            <div class="box">
-                <i class="ri-hotel-line"></i>
-                <h2>Hotely</h2>
-            </div>
-            <div class="box">
-                <i class="ri-restaurant-fill"></i>
-                <h2>Restaurace</h2>
-            </div>
-            <div class="box">
-                <i class="ri-building-4-fill"></i>
-                <h2>Kancelářské budovy</h2>
-            </div>
-            <div class="box">
-                <i class="ri-bank-fill"></i>
-                <h2>Cokoliv dalšího</h2>
-            </div>
-        </section>
-        <section id="about" class="container">
-            <div class="content">
-                <div class="text-box">
-                    <h3>
-                        O nás
-                    </h3>
-                    <p>
-                        Společnost <strong>Clean Force One</strong> byla založena v květnu 2008 a spontánně navázala na
-                        zkušenosti z oblasti vzduchotechniky a údržby o ni.
-                    </p>
-                    <br>
-                    <p>
-                        <strong>A proč si vybrat právě nás?</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-thumb-up-line"></i> Jsme v oboru již <span id="yearsPassed"></span> let</li>
-                        <li><i class="ri-thumb-up-line"></i> Práci se věnujeme s péčí</li>
-                        <li><i class="ri-thumb-up-line"></i> Pracujeme v noci i o víkendech</li>
-                        <li><i class="ri-thumb-up-line"></i> Máme spokojené zákazníky</li>
-                        <li><i class="ri-thumb-up-line"></i> Cenovou nabídku Vám vypracujeme po obhlídce a posouzení
-                            skutečného stavu znečištění vzduchotechniky</li>
-                    </ul>
-                    <br>
-                    <p>
-                        <strong>Jak čistíme potrubí?</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-bard-line"></i> <strong>Suché</strong> pomocí technologie LIFA AIR (rotační
-                            kartáče, ventilárory, průmyslové vysavače)</li>
-                        <li><i class="ri-bard-line"></i> <strong>Mastné</strong> ekologicky nezávadnými čistícími
-                            přípravky, rozpouštědly a vodou pod tlakem (WAP)</li>
-                    </ul>
-                    <br>
-                    <p>
-                        <strong>Vyčistíme všechno co patří ke vzduchotechnice</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-arrow-drop-right-fill"></i> Strojovny vzduchotechniky, rekuperátory, tlumiče
-                            hluku, požární a regulační klapky, výustky, ventilátory, digestoře, tukové filtry a další
-                        </li>
-                        <li><i class="ri-arrow-drop-right-fill"></i> <strong>Prachové filtry</strong> dodáme a vyměníme.
-                            <strong>Tukové filtry</strong> vyrobíme nebo zrepasujeme.</li>
-                    </ul>
+        <section id="home">
+            <div class="container">
+                <div id="logo">
+                    <img src="images/Logo4White.png" alt="Logo firmy">
+                    <h1>Zajistíme čistý vzduch pro Vaše zákazníky i zaměstnance</h1>
                 </div>
-                <div class="image">
-                    <img src="images/gallery/car002.jpeg" alt="">
+                <div class="content">
+                    <div class="box">
+                        <i class="ri-building-3-line"></i>
+                        <h2>Průmyslové budovy</h2>
+                    </div>
+                    <div class="box">
+                        <i class="ri-hotel-line"></i>
+                        <h2>Hotely</h2>
+                    </div>
+                    <div class="box">
+                        <i class="ri-restaurant-fill"></i>
+                        <h2>Restaurace</h2>
+                    </div>
+                    <div class="box">
+                        <i class="ri-building-4-fill"></i>
+                        <h2>Kancelářské budovy</h2>
+                    </div>
+                    <div class="box">
+                        <i class="ri-bank-fill"></i>
+                        <h2>Cokoliv dalšího</h2>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="clients" class="container">
-            <div class="slider" style="
-                --width: 100px;
-                --height: 100px;
-                --quantity: 8;
-                ">
-                <div class="list">
-                    <div class="item" style="--position: 1"><img src="images/clients/bondy_red_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 2"><img src="images/clients/fenix_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 3"><img src="images/clients/Ceske_radiokomunikace_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 4"><img src="images/clients/hotel_clarion_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 5"><img src="images/clients/hotel_meritum_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 6"><img src="images/clients/lazne_podebrady_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 7"><img src="images/clients/lazne_priessnitz_transparent.png" alt=""></div>
-                    <div class="item" style="--position: 8"><img src="images/clients/CVUT_SUZ_transparent.png" alt=""></div>
+
+        <section id="about" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>O nás</h2>
+                    <p>Proč my?</p>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <br>
+                        <p>
+                            Společnost <strong>Clean Force One</strong> byla založena v květnu 2008 a spontánně navázala
+                            na
+                            zkušenosti z oblasti vzduchotechniky a údržby o ni.
+                        </p>
+                        <br>
+                        <ul>
+                            <li><i class="ri-thumb-up-line"></i> Jsme v oboru již <span id="yearsPassed"></span> let
+                            </li>
+                            <li><i class="ri-thumb-up-line"></i> Práci se věnujeme s péčí</li>
+                            <li><i class="ri-thumb-up-line"></i> Pracujeme v noci i o víkendech</li>
+                            <li><i class="ri-thumb-up-line"></i> Máme spokojené zákazníky</li>
+                            <li><i class="ri-thumb-up-line"></i> Cenovou nabídku Vám vypracujeme po obhlídce a posouzení
+                                skutečného stavu znečištění vzduchotechniky</li>
+                        </ul>
+                        <br><br>
+                        <p>
+                            <strong>Jak čistíme potrubí?</strong>
+                        </p>
+                        <ul>
+                            <li><i class="ri-bard-line"></i> <strong>Suché</strong> pomocí technologie LIFA AIR (rotační
+                                kartáče, ventilárory, průmyslové vysavače)</li>
+                            <li><i class="ri-bard-line"></i> <strong>Mastné</strong> ekologicky nezávadnými čistícími
+                                přípravky, rozpouštědly a vodou pod tlakem (WAP)</li>
+                        </ul>
+                        <br>
+                        <p>
+                            <strong>Vyčistíme všechno co patří ke vzduchotechnice</strong>
+                        </p>
+                        <ul>
+                            <li><i class="ri-arrow-drop-right-fill"></i> Strojovny vzduchotechniky, rekuperátory,
+                                tlumiče
+                                hluku, požární a regulační klapky, výustky, ventilátory, digestoře, tukové filtry a
+                                další
+                            </li>
+                            <li><i class="ri-arrow-drop-right-fill"></i> <strong>Prachové filtry</strong> dodáme a
+                                vyměníme.
+                                <strong>Tukové filtry</strong> vyrobíme nebo zrepasujeme.
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="about-image" class="image"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="modul">
+            <div class="scroller">
+                <div class="scroller__inner">
+                    <div><img src="images/clients/bondy_red_transparent.png" alt=""></div>
+                    <div><img src="images/clients/fenix_transparent.png" alt=""></div>
+                    <div><img src="images/clients/Ceske_radiokomunikace_transparent.png" alt=""></div>
+                    <div><img src="images/clients/hotel_clarion_transparent.png" alt=""></div>
+                    <div><img src="images/clients/hotel_meritum_transparent.png" alt=""></div>
+                    <div><img src="images/clients/lazne_podebrady_transparent.png" alt=""></div>
+                    <div><img src="images/clients/lazne_priessnitz_transparent.png" alt=""></div>
+                    <div><img src="images/clients/CVUT_SUZ_transparent.png" alt=""></div>
                 </div>
             </div>
             <!-- <script>
@@ -123,18 +129,383 @@
                 document.querySelector(".logos").appendChild(copy);
             </script> -->
         </section>
-        <section id="services" class="container">
+
+        <section id="why" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Proč</h2>
+                    <p>Proč čistit vzduchotechniku (VZT)</p>
+                </div>
+                <div class="content">
+                    <div id="why-image" class="image"></div>
+                    <div class="text">
+                        <ul>
+                            <li><i class="ri-shield-check-line"></i>Kvalita vzduchu v interiérech má významný vliv na
+                                zdraví a pohodlí Vašich zaměstnanců i zákazníků</li>
+                            <li><i class="ri-shield-check-line"></i>VZT je častým důvodem nejenom zdravotních problémů
+                            </li>
+                            <li><i class="ri-shield-check-line"></i>Zanášení VZT se stává živnou půdou pro bakterie,
+                                plísně nebo houby</li>
+                            <li><i class="ri-shield-check-line"></i>Vyčištěním a dezinfekcí vzduchotechniky dojde k
+                                likvidaci mikroorganizmů, které Vám znepříjemňují život</li>
+                            <li><i class="ri-shield-check-line"></i>Zaprášená, anebo mastná VZT je nebezpečná i z
+                                požárního hlediska,
+                                protože některé druhy prachu jsou nebezpečnou výbušninou</li>
+                            <li><i class="ri-shield-check-line"></i>A v neposlední řadě je zaprášené a mastné potrubí
+                                tzv. "rychlým přepravcem ohně" po celé budově</li>
+                            <li><i class="ri-shield-check-line"></i>VZT je častým důvodem nejenom zdravotních problémů.
+                            </li>
+                            <li><i class="ri-shield-check-line"></i>VZT je častým důvodem nejenom zdravotních problémů.
+                            </li>
+                        </ul>
+                        <br><br>
+                        <p>
+                            Vyčištění vzduchotechnického potrubí je významným krokem ke zvýšení kvality vzduchu na Vašem
+                            pracovišti
+                            a ke splnění norem BOZP.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="gallery" class="container">
+
+        <section class="contact-row">
+            <div class="contact-content">
+                <div>
+                    <h3>Napište nám a poptejte se</h3>
+                    <p> Nezávazně a <span id="special-text">zdarma</span> Vám provedeme nacenění prací.</p>
+                    <br>
+                    <a href="#contact-us"><button>Nezávazně poptat</button></a>
+                </div>
+            </div>
         </section>
-        <section id="team" class="container">
+
+        <section id="services" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Služby</h2>
+                    <p>Co pro Vás uděláme</p>
+                </div>
+                <div class="content">
+                    <div class="services-card">
+                        <div class="card-img card-img-1"></div>
+                        <h3>Obhlídka</h3>
+                        <br>
+                        <p>Fotografie nám nestačí. Přijedeme osobně a zcela <b>zdarma</b> provedeme obhlídku, abychom
+                            zjistili skutečný stav znečištění.</p>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="card-img card-img-2"></div>
+                        <h3>Cenová nabídka</h3>
+                        <br>
+                        <p>Velmi nám pomůžete, pokud od Vás obdržíme technickou dokumentaci.
+                            Na základě té Vám dokážeme nabídnout <b>nejlepší možnou cenu</b>.
+                        </p>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="card-img card-img-3"></div>
+                        <h3>Termín</h3>
+                        <br>
+                        <p>Rozumíme Vaším potřebám co nejméně omezit provoz. Jsme velmi flexibilní a to prakticky
+                            <b>24&nbsp;-&nbsp;7.</b>
+                            Navrhneme časový harmonogram prací tak, aby vyhovoval Vám.</p>
+                    </div>
+
+                    <div class="services-card">
+                        <div class="card-img card-img-4"></div>
+                        <h3>Jde se na věc</h3>
+                        <br>
+                        <p>Teď už je vše domluvené a míč je na naší straně. Takže hurá do práce.
+                            <span id="motto"> Kvalitně, precizně a rychle! </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact-us" class="container">
+
+        <section class="contact-row">
+            <div class="contact-content">
+                <div>
+                    <h3 id="special-text">Obhlídka zdarma</h3>
+                    <p> Pořád váháte?. Třeba Vás přesvědčí naši spokojení klienti.
+                        <br> Obhlídku Vám ovšem provedeme zcela <span id="special-text">ZDARMA</span> a bez závazku k
+                        další práci.
+                    </p>
+                    <br>
+                    <a href="#contact-us"><button>Nezávazně poptat</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Galerie</h2>
+                    <p>Naše práce</p>
+                </div>
+                <div class="content">
+                    <div class="filter-buttons">
+                        <button data-filter="all" class="active">Vše</button>
+                        <button data-filter="before">Před</button>
+                        <button data-filter="after">Po</button>
+                        <button data-filter="other">Jiné</button>
+                    </div>
+                    <div class="gallery-group">
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/digestor_1.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/digestor_2.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/strojovna_1.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/strojovna_2.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/suche_potrubi_1.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/suche_potrubi_2.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/potrubi004_1.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/potrubi004_2.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/potrubi002_1.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/potrubi002_2.jpg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/potrubi003_1.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/potrubi003_2.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/potrubi005_1.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/potrubi005_2.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/potrubi005_3.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/potrubi005_4.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/komin_1.jpeg" alt="">
+                        </div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/komin_2.jpeg" alt="">
+                        </div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/rekuperator_1.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/rekuperator_2.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="before"><img src="images/gallery/tlumic_1.jpeg"
+                                alt=""></div>
+                        <div class="gallery-image" data-category="after"><img src="images/gallery/tlumic_2.jpeg" alt="">
+                        </div>
+                        <div class="gallery-image" data-category="other"><img src="images/gallery/car001.jpeg" alt="">
+                        </div>
+                        <div class="gallery-image" data-category="other"><img src="images/gallery/car002.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="small-row" class="contact-row">
+            <div class="container">
+                <div class="contact-content">
+                    <a href="#contact-us"><button>Napište nám</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="counts" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Počty</h2>
+                    <p>Naše práce v číslech</p>
+                    <br>
+                    <a>Slova jsou možná mocná zbraň, nýbrž fakta, jsou fakta. Počet zákazníků pro nás není podstatný.
+                        <span id="motto">Počet spokojených zákazníků je pro nás hodnota a směr.</span>
+                    </a>
+                </div>
+
+                <div class="content">
+                    <div id="counts-image" class="image"></div>
+                    <div class="text">
+                        <div class="counts">
+                            <div class="count-box">
+                                <i class="ri-emotion-happy-line"></i>
+                                <span class="counter" data-start="0" data-end="65" data-duration="2000"></span>
+                                <p><strong>Spokojených klientů</strong>, se kterými spolupracujeme již řadu let a kteří
+                                    se k nám opakovaně vracejí.</p>
+                            </div>
+                            <br>
+                            <div class="counts">
+                                <div class="count-box">
+                                    <i class="ri-time-line"></i>
+                                    <span class="counter years-counter" data-start="0" data-end="0"
+                                        data-duration="2000"></span>
+                                    <p><strong>Let zkušeností</strong> v oboru a zároveň doba, po kterou poskytujeme
+                                        pouze ty nejlepší služby.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <section id="team" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Team</h2>
+                    <p>Kdo se o Vás postará</p>
+                </div>
+                <div class="team-content">
+                    <div class="team-card-box">
+                        <div class="team-card">
+                            <div class="team-card-img team-card-img-1"></div>
+                            <div class="team-member-info">
+                                <h3>Ladislav Kontúr</h3>
+                                <p>Majitel a jednatel firmy</p>
+                                <div class="social-box">
+                                    <div class="social">
+                                        <i class="ri-phone-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;(+420) 123-456-789</span></i>
+                                        <i class="ri-mail-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;ladislav.kontur@cleanforce1.cz</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card-box">
+                        <div class="team-card" >
+                            <div class="team-card-img team-card-img-2"></div>
+                            <div class="team-member-info">
+                                <h3>Radek Kontúr</h3>
+                                <p>Hlavní technik</p>
+                                <div class="social-box">
+                                    <div class="social">
+                                        <i class="ri-phone-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;(+420) 123-456-789</span></i>
+                                        <i class="ri-mail-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;radek.kontur@cleanforce1.cz</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contact-us" class="modul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Kontakt</h2>
+                    <p>Napište nám</p>
+                </div>
+                <div class="content">
+                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2556.3939864727126!2d14.087462577490644!3d50.153767808680016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bc82a09d2578d%3A0xd9c8dff9c6a26412!2sNa%20Vyhasl%C3%A9m%203260%2C%20272%2001%20Kladno%201!5e0!3m2!1sen!2scz!4v1719059135169!5m2!1sen!2scz" frameborder="0" allowfullscreen></iframe>
+
+                        <div class="contact-info">
+                            <div class="address">
+                                <h4>Adresa:</h4>
+                                <p>Na vyhaslém 3260, 272 04 Kladno</p>
+                                <br>
+                            </div>
+            
+                            <div class="email">
+                                <h4>Email:</h4>
+                                <p>ladislav.kontur@cleanforce1.cz</p>
+                                <br>
+                            </div>
+            
+                            <div class="phone">
+                                <h4>Telefon:</h4>
+                                <p>(+420) 605 756 985</p>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <form action="contact.php" method="POST">
+                                <div class="input-row">
+                                    <input type="text" name="name" placeholder="Vaše jméno">
+                                    <input type="email" name="email" placeholder="Váš e-mail" required>
+                                </div>
+                                <input type="text" name="subject" placeholder="Předmět" required>
+                                <textarea name="message" placeholder="Co pro Vás můžeme udělat?" required></textarea>
+                                <div class="g-recaptcha" data-sitekey="TVŮJ_SITE_KEY"></div>
+                                <button type="submit">Odeslat zprávu</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-    </footer>
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3 class="logo me-auto me-lg-0"><a href="index.html"><img src="/images/Logo4White.png" alt="Logo firmy" class="img-fluid"></a></h3>
+              <p>
+                Na vyhaslém 3260 <br>
+                272 04 Kladno<br><br>
+                <strong>Telefon:</strong> (+420) 605 756 985<br>
+                <strong>Email:</strong> ladislav.kontur@cleanforce1.cz<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <h4>Odkazy</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Domů</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">O nás</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Služby</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Galerie</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Tým</a></li>
+            </ul>
+          </div>
+
+          <div class="">
+            <h4>Naše služby</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i>Čištění vzduchotechniky</li>
+              <li><i class="bx bx-chevron-right"></i>Obhlídky VZT zdarma</li>
+              <li><i class="bx bx-chevron-right"></i>Kalkulace prací na míru</li>
+              <li><i class="bx bx-chevron-right"></i>Drobné opravy mechanických částí VZT</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Peter Kontúr</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        const startYear = 2008;
+        const yearsPassed = currentYear - startYear;
+
+        document.querySelectorAll(".years-counter").forEach(el => {
+            el.setAttribute("data-end", yearsPassed);
+        });
+
+        // Najdeme prvek a vložíme do něj hodnotu
+        let counterElement = document.querySelector(".years-counter");
+        counterElement.setAttribute("data-end", yearsPassed);
+
+    </script>
+    <script src="app.js" type="text/javascript"></script>
 </body>
 
 </html>
