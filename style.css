@@ -41,6 +41,13 @@ header{
 header.scrolled{
     background-color: rgba(0, 0, 0, 0.8);
 }
+footer {
+    background-color: var(--base-black-clr);
+    color: var(--base-white-clr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 section{
     display: flex;
     flex-direction: row;
@@ -72,12 +79,11 @@ nav{
     font-size: 1.5rem;
 }
 .nav__links li a:hover{
-    text-shadow: 1px 1px 10px white;
+    text-shadow: 1px 1px 10px var(--base-blue-clr);
     color: var(--base-blue-clr);
 }
 .nav__links li a.active {
     color: var(--base-blue-clr);
-    text-shadow: 1px 1px 10px white;
 }
 button{
     width: 200px;
@@ -191,9 +197,26 @@ i{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: justify;
     gap: 20px;
     width: 90%;
     padding: 5px;
+    color: #555555;
+}
+.content-main-text {
+    font-size: 1.2rem;
+    color: #555555;
+}
+.content-table {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
+    max-width: 500px;
+    line-height: 1;
+}
+.content-table > i {
+    font-size: 1rem;
 }
 .services-card{
     margin: 10px;
@@ -216,6 +239,7 @@ i{
     margin: 0 20px;
     word-wrap: wrap;
     font-size: 1rem;
+    text-align: justify;
 }
 .services-card > p > b {
     white-space: nowrap;
@@ -384,6 +408,15 @@ i{
     justify-content: center;
     text-align: center;
 }
+.contact-info {
+    width: 50%;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
 #home{
     display: flex;
     flex-direction: row;
@@ -408,7 +441,7 @@ i{
     margin-bottom: 20px;
 }
 .filter-buttons button {
-    width: 200px;
+    width: 100px;
     background-color: rgb(234, 238, 238);
     border: 2px solid transparent;
     box-shadow: rgb(190, 190, 190) 1px 1px 10px;
@@ -540,6 +573,7 @@ i{
     border-radius: 4px;
     box-shadow: 1px 1px 10px rgb(206, 205, 205);
     resize: none;
+    font: inherit;
 }
 
 .contact-form textarea {
@@ -555,29 +589,56 @@ i{
     color: var(--base-black-clr);
     border: none;
     border-radius: 4px;
+    box-shadow: 1px 1px 10px rgb(206, 205, 205);
     cursor: pointer;
     font-size: 16px;
+    font: inherit;
 }
 
 .contact-form button:hover {
-    background: rgb(100, 214, 24);
+    background: rgb(0, 140, 255);
     box-shadow: 1px 1px 10px rgb(146, 146, 146);
     color: var(--base-black-clr);
+}
+.contact-pair {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .input-row {
     display: flex;
     gap: 10px;
 }
-
 .input-row input {
     flex: 1;
 }
-
 .email, .phone, .address {
     width: 300px;
     justify-content: start;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    margin: 50px 10px;
+    gap:  30px;
+}
+.footer-box {
+    margin: 0 50px;
+}
+.footer-box > ul, li, a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+.footer-box a:hover {
+    color: var(--base-blue-clr);
+}
+
 @keyframes scroll{
     to{
         transform: translate(calc(-50% - 1rem));

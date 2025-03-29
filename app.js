@@ -31,6 +31,16 @@ function addAnimation() {
     });  
 };
 
+function resizeTextarea(el) {
+    el.style.height = "auto"; // Resetne výšku
+    el.style.height = el.scrollHeight + "px"; // Nastaví novou výšku podle obsahu
+}
+
+
+function onSubmit(token) {
+document.getElementById("contact-form").submit();
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".filter-buttons button");
     const images = document.querySelectorAll(".gallery-group .gallery-image");
