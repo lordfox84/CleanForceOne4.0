@@ -38,7 +38,7 @@ function resizeTextarea(el) {
 
 
 function onSubmit(token) {
-document.getElementById("contact-form").submit();
+    document.getElementById("contact-form").submit();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
