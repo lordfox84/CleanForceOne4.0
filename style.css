@@ -462,7 +462,27 @@ i{
 .filter-buttons button.active {
     background-color: var(--base-blue-clr);
     box-shadow: 1px 1px 10px rgb(104, 104, 104);
-  }
+}
+
+.button {
+    width: 200px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-align: center;
+    text-wrap: nowrap;
+    color: var(--base-white-clr);
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.button:hover{  
+    box-shadow: 1px 1px 20px rgb(155, 155, 155);
+    background-color: var(--base-blue-clr);
+    color: black;
+}
+
 .gallery-group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
