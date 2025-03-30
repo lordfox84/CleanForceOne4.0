@@ -37,9 +37,9 @@ function resizeTextarea(el) {
 }
 
 
-function onSubmit(token) {
-    document.getElementById("contact-form").submit();
-}
+// function onSubmit(token) {
+//     document.getElementById("contact-form").submit();
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".filter-buttons button");
