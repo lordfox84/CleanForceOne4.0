@@ -456,7 +456,7 @@
                             
                             <div class="g-recaptcha" data-sitekey="6Lf6iQQrAAAAAEL6aS3W3RVCkYF1ph6RBUkPPY6E"></div>
                             <button type="submit" class="send-button">Odeslat zprávu</button>
-                            <p class="recaptcha-text">Odesláním formuláře souhlasíte se zpracováním osobních údajů.</p>                       
+                            <p class="recaptcha-text">*Odesláním formuláře souhlasíte se zpracováním osobních údajů.</p>                       
                         </form>
                         <div id="response-message"></div>
                     </div>
@@ -518,18 +518,27 @@
     </footer>
 
     <script>
+        // const currentYear = new Date().getFullYear();
+        // const startYear = 2008;
+        // const yearsPassed = currentYear - startYear;
+
+        // document.querySelectorAll(".years-counter").forEach(el => {
+        //     el.setAttribute("data-end", yearsPassed);
+        // });
+
+        // // Najdeme prvek a vložíme do něj hodnotu
+        // let counterElement = document.querySelector(".years-counter");
+        // counterElement.setAttribute("data-end", yearsPassed);
+
         const currentYear = new Date().getFullYear();
         const startYear = 2008;
         const yearsPassed = currentYear - startYear;
 
-        document.querySelectorAll(".years-counter").forEach(el => {
-            el.setAttribute("data-end", yearsPassed);
-        });
-
-        // Najdeme prvek a vložíme do něj hodnotu
-        let counterElement = document.querySelector(".years-counter");
-        counterElement.setAttribute("data-end", yearsPassed);
-
+        // Najdeme prvek podle jeho ID a vložíme do něj hodnotu
+        let counterElement = document.getElementById("yearsPassed");
+        if (counterElement) {
+            counterElement.textContent = yearsPassed; // Vložení textového obsahu do elementu
+        }
     </script>
     <script src="app.js" type="text/javascript"></script>
 </body>
