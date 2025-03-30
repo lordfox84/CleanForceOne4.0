@@ -20,13 +20,14 @@ $_SESSION['last_submit'] = time();
 
 // ✅ RECAPTCHA OVĚŘENÍ
 $recaptchaSecret = $_ENV['RECAPTCHA_SECRET'];
-$recaptchaResponse = $_POST['recaptcha_response'] ?? '';
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
 $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
 $recaptchaData = json_decode($recaptchaVerify);
 
-if (!$recaptchaData->success || $recaptchaData->score < 0.5) {
-    die(json_encode(["status" => "error", "message" => "Podezřelá aktivita! reCAPTCHA ověření selhalo."]));
+if (intval($recaptchaData->success) !== 1) {
+    // Pokud reCAPTCHA neproběhla úspěšně
+    die(json_encode(["status" => "error", "message" => "reCAPTCHA ověření selhalo."]));
 }
 
 // ✅ OCHRANA PROTI BOTŮM (Honeypot)
@@ -57,6 +58,7 @@ $mail = new PHPMailer(true);
 
 try {
     // 🔐 SMTP NASTAVENÍ (Heslo z ENV, ne v kódu!)
+    $mail->CharSet = 'UTF-8'; 
     $mail->isSMTP();
     $mail->Host = $_ENV['SMTP_HOST'];
     $mail->SMTPAuth = true;
@@ -66,7 +68,7 @@ try {
     $mail->Port = $_ENV['SMTP_PORT'];
 
     // 📌 Odesílatel a příjemce
-    $mail->setFrom('tvůj@email.cz', 'Kontakt formulář');
+    $mail->setFrom($_ENV['SENDER_EMAIL'], 'Kontakt formulář');
     $mail->addAddress($_ENV['SMTP_USERNAME']);
 
     // 📌 E-mail obsah
@@ -77,9 +79,13 @@ try {
                    <p><strong>Zpráva:</strong> $message</p>";
     $mail->AltBody = "Jméno: $name\nE-mail: $email\nZpráva: $message";
 
+    // Odeslání e-mailu
     $mail->send();
+    
+    // Pokud všechno probíhá správně, pošleme odpověď s úspěchem
     echo json_encode(["status" => "success", "message" => "Zpráva byla úspěšně odeslána!"]);
 } catch (Exception $e) {
+    // Pokud dojde k chybě při odesílání e-mailu, odpověd s chybou
     echo json_encode(["status" => "error", "message" => "E-mail se nepodařilo odeslat: {$mail->ErrorInfo}"]);
 }
 ?>

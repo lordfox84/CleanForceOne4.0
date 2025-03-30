@@ -85,7 +85,7 @@ nav{
 .nav__links li a.active {
     color: var(--base-blue-clr);
 }
-button{
+button {
     width: 200px;
     background-color: transparent;
     border: 2px solid var(--base-blue-clr);
@@ -99,7 +99,7 @@ button{
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
-button:hover{  
+button:hover {  
     box-shadow: 1px 1px 10px white;
     background: var(--base-blue-clr);
     color: black;
@@ -464,7 +464,7 @@ i{
     box-shadow: 1px 1px 10px rgb(104, 104, 104);
 }
 
-.button {
+.send-button {
     width: 200px;
     background-color: rgb(155, 155, 155);
     border-radius: 10px;
@@ -477,11 +477,20 @@ i{
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
-.button:hover{  
+.send-button:hover{  
     box-shadow: 1px 1px 20px rgb(155, 155, 155);
     background-color: var(--base-blue-clr);
     color: black;
 }
+.success {
+    color: green;
+    font-size: 1.1rem;
+}
+.error {
+    color: red;
+    font-size: 1.1rem;
+}
+
 
 .gallery-group {
     display: grid;

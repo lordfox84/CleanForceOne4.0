@@ -37,9 +37,10 @@ function resizeTextarea(el) {
 }
 
 
-// function onSubmit(token) {
-//     document.getElementById("contact-form").submit();
-// }
+function onSubmit(token) {
+    console.log("Funkce odesílání byla spuštěna");
+    document.getElementById("contact-form").submit();
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".filter-buttons button");
@@ -61,6 +62,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();  // Zabráníme odeslání formuláře běžným způsobem
+
+    // Vytvoříme nový FormData objekt, který obsahuje data formuláře
+    var formData = new FormData(this);
+
+    // Odeslání formuláře pomocí Fetch API
+    fetch('contact.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())  // Zpracování JSON odpovědi
+    .then(data => {
+        // Pokud je status "success", zobrazíme úspěšnou zprávu
+        const responseMessage = document.getElementById('response-message');
+        if (data.status === 'success') {
+            responseMessage.innerHTML = '<p class="success">' + data.message + '</p>';
+            responseMessage.style.display = 'block'; // Zobrazíme zprávu
+            document.getElementById('contact-form').reset(); // Vynulujeme formulář
+        } else {
+            // Pokud je status "error", zobrazíme chybovou zprávu
+            responseMessage.innerHTML = '<p class="error">' + data.message + '</p>';
+            responseMessage.style.display = 'block'; // Zobrazíme zprávu
+        }
+    })
+    .catch(error => {
+        // Pokud dojde k chybě, zobrazíme chybovou zprávu
+        const responseMessage = document.getElementById('response-message');
+        responseMessage.innerHTML = '<p class="error">Došlo k chybě při odesílání formuláře.</p>';
+        responseMessage.style.display = 'block'; // Zobrazíme zprávu
+    });
+});
+
+
 
 const buttons = document.querySelectorAll(".filter-buttons button");
 buttons.forEach(button => {
