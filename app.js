@@ -116,7 +116,7 @@ items.forEach(li => {
 
 function animateCounter(element) {
     let start = parseInt(element.getAttribute("data-start")) || 0;
-    let end = parseInt(element.getAttribute("data-end")) || 100;
+    let end = parseInt(element.getAttribute("data-end")) || yearsPassed;
     let duration = parseInt(element.getAttribute("data-duration")) || 2000;
 
     let startTime = null;
